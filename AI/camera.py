@@ -10,13 +10,16 @@ if capture.isOpened():
     ret, frame = capture.read()
 
     if ret:
-      cv2.imshow("VideoFrame", frame)
+      cv2.imshow("VideoFrame", frame) 
 
-      #q 누르면 사진을 저장하고 종료
+      #q 누르면 사진을 저장
       if cv2.waitKey(1) & 0xFF == ord('q'):
-        cv2.imwrite("C:\project\Bingleiro\AI\photo\photo.jpg", frame) #사진 저장
+        cv2.imwrite("C:\project\Bingleiro\AI\photo\photo.jpg", frame)
         print("Photo saved!")
+      #w 누르면 종료
+      if cv2.waitKey(1) & 0xFF == ord('w'):
         break
+    
     else:
       print("No frame available")
       break
