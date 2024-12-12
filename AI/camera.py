@@ -26,6 +26,6 @@ if capture.isOpened():
 else:
   print("Can't open camera")
 
-#종료
+#카메라 해제 및 창 닫기
 capture.release()
 cv2.destroyAllWindows()
